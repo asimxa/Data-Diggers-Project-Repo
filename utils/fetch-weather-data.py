@@ -2,7 +2,7 @@ import csv
 import datetime
 import requests
 
-API_KEY = "<secret>"
+API_KEY = "<SECRET>"
 BASE_URL = "https://api.weather.com/v1/location/KBUR:9:US/observations/historical.json"
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:134.0) Gecko/20100101 Firefox/134.0",
@@ -86,6 +86,6 @@ if __name__ == "__main__":
     start_date = datetime.date(2018, 1, 1)
     end_date = datetime.date(2021, 1, 1)
     weather_data = get_monthly_weather_data(API_KEY, start_date, end_date)
-    output_filename = "../resources/burbank_weather_data.csv"
+    output_filename = "../resources/csv_files/new_burbank_weather_data.csv"
     save_to_csv(weather_data, output_filename)
     print(f"Data saved to {output_filename}.")
