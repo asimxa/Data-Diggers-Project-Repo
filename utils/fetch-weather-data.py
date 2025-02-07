@@ -84,7 +84,7 @@ def save_to_csv(data, filename):
 
 if __name__ == "__main__":
     start_date = datetime.date(2018, 1, 1)
-    end_date = datetime.date(2021, 1, 1)
+    end_date = datetime.date(2021, 10, 31)
     weather_data = get_monthly_weather_data(API_KEY, start_date, end_date)
     output_filename = "../resources/csv_files/new_burbank_weather_data.csv"
     save_to_csv(weather_data, output_filename)
