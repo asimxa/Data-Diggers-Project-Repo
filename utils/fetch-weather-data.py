@@ -66,8 +66,7 @@ def get_monthly_weather_data(api_key, start_date, end_date):
                 }
                 all_data.append(record)
         else:
-            print(f"Failed to fetch data for {start_date_str} to {
-                end_date_str}: {response.status_code}")
+            print(f"Failed to fetch data for {start_date_str} to {end_date_str}: {response.status_code}")
 
         current_date = (
             current_date + datetime.timedelta(days=31)).replace(day=1)
